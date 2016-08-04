@@ -29,7 +29,7 @@ typedef struct addr_table {
     uint8_t  mac_me[ETH_ALEN];
     uint8_t  mac_gateway[ETH_ALEN];
 }addr_t;
-
+/*
 // used deliver packet
 typedef struct ether_header
 {
@@ -65,11 +65,11 @@ typedef struct tcp_header
     u_short crc; // Header Checksum
     u_short urgptr; // Urgent pointer...still don't know what this is...
 }tcp_header;
-
+*/
 // used func
 void set_addr(addr_t *table, char *victim_ip);
-void handler(u_char *param, const struct pcap_pkthdr *header, const u_char *pkt_data);
+//void handler(u_char *param, const struct pcap_pkthdr *header, const u_char *pkt_data);
 
 // used thread
 void *thread1_send_arp(void *arg);
-void *thread2_deliver_packet(void *arg);
+//void *thread2_deliver_packet(void *arg);
